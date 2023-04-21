@@ -1,5 +1,4 @@
 const routes = require('express').Router();
-routes.get('/', (req, res)=>{
-  res.send("Emily Wall")
-})
+const controller = require('../controllers');
+routes.get('/', controller.displayName);
 module.exports = routes;
