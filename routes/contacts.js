@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-//Need this to use the .getAll & .getSingle functions below
 const contactsController = require('../controllers/contacts');
 
 /*Here's an article that helped me understand how the express.Router() works:
@@ -10,7 +9,8 @@ In CSE 340, we had to write lots of case statements to determine what we wanted
 to have happen. This is a shortcut.*/
 router.get('/', contactsController.getAll);
 router.get('/:id', contactsController.getSingle);
+router.post('/add', contactsController.addContact);
+router.put('/edit/:id', contactsController.editContact);
+router.delete('/delete/:id', contactsController.deleteContact);
 
-/*Question about this: why are we exporting the same thing that was exported
-in the routes/index.js file?*/
 module.exports = router;
