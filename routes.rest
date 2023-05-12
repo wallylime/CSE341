@@ -1,5 +1,9 @@
 // LOCALHOST 
+###
+//See API Docs
+GET http://localhost:8080/api-docs HTTP/1.1
 
+###
 //Get all contacts in the database
 GET http://localhost:8080/contacts HTTP/1.1
 
@@ -35,10 +39,14 @@ content-type: application/json
 
 ###
 //Delete a contact
-DELETE http://localhost:8080/contacts/delete/64567936f4c592fa94bde2e5 HTTP/1.1
+DELETE http://localhost:8080/contacts/delete/645687ce58e4d5557ce0ad53 HTTP/1.1
 
 
 #--PRODUCTION DEPLOY---#
+###
+//See API Docs
+GET https://cse341-vvco.onrender.com/api-docs
+
 ###
 //Get all contacts in the database
 GET https://cse341-vvco.onrender.com/contacts 
@@ -75,4 +83,6 @@ Content-Type: application/json
 
 ###
 //Delete a contact
-DELETE https://cse341-vvco.onrender.com/contacts/delete/6456810f5fcb9256756d6273 HTTP/1.1
+DELETE https://cse341-vvco.onrender.com/contacts/delete/645d58ab38c29d9ad7888f7f HTTP/1.1
+
+
